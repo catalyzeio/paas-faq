@@ -1,6 +1,6 @@
 # Local testing
 
-### Is there a way that i can test my application locally on my development workstation prior to deploying on catalyze?
+### Is there a way that I can test my application locally on my development workstation prior to deploying on catalyze?
 
 While we do not provide a local development environment with the full capabilities of the catalyze platform, you can use the following to test that your application builds and will run. 
 
@@ -32,7 +32,7 @@ git clone https://github.com/heroku/node-js-sample
 git clone https://github.com/progrium/buildstep.git
 ```
  
-#### build your code into a container called `myapp`
+#### Build your code into a container called `myapp`
 
 ```
 cd /tmp/buildstep
@@ -72,7 +72,7 @@ curl http://$BTD_IP:9090
 ```
 
 
-###Tips:
+### Tips:
 
 - If you need to add environment variables for the build, create the file `.env` in your application directory with the required list of environment variables. The format should be as follows: `export MYVAR=value`
 - To add multiple environment variables for the application at runtime, use `docker --env-file env.list` .... `env.list` uses the format `MYVAR=value`
