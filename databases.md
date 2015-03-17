@@ -1,3 +1,7 @@
+---
+title: Databases - PaaS FAQ
+---
+
 # Databases
 
 ### What versions of the [supported databases](//resources.catalyze.io/paas/getting-started/deploying-your-first-app/supported-databases/) does Catalyze use?
