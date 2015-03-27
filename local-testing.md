@@ -24,11 +24,12 @@ BTD_IP=$(echo ${DOCKER_HOST} | grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}
 ```
 #### Get your app
 
-For demonstration purposes we just pull heroku's node-js sample.
+For demonstration purposes we just pull heroku's node-js sample. When you try it out, you should replace the github url below with a pointer to your code.
 
 ```
 git clone https://github.com/heroku/node-js-sample 
 ``` 
+
 
 #### Get buildstep
 
@@ -36,7 +37,9 @@ git clone https://github.com/heroku/node-js-sample
 git clone https://github.com/progrium/buildstep.git
 ```
  
-#### Build your code into a container called `myapp`
+#### Build your code into a container
+
+Call it `myapp` or whatever you choose.
 
 ```
 cd /tmp/buildstep
@@ -48,6 +51,8 @@ tar cC /tmp/node-js-sample . | ./buildstep myapp
 ```
 docker run -p 8080:8080 -e PORT=8080 -e DATABASE_URL=mongodb://your.mongo.container.ip:12345 -d myapp /bin/bash -c "/start web"
 ```
+
+Replace the ``your.mongo.container.ip:12345`` with the URL that we provided you.
  
 #### Test it
 
@@ -57,7 +62,7 @@ curl http://$BTD_IP:8080
  
 #### What if I need to use a custom buildpack?
 
-Set the environment variable `BUILDPACK_URL` and you will be good to go. 
+Set the environment variable `BUILDPACK_URL` and you will be good to go. We've used a sample customer buildpack in the example below. Please adjust it to whatever specific buildpack you would like to test. As a note of caution, please do not use any and all buildpacks out there. Please exercise some caution as some buildpacks can be malicious. In general, if you don't fully understand all the things in the buildpack, please do not use it.
 
 ```
 echo "export BUILDPACK_URL=https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt.git" > /tmp/node-js-sample/.env

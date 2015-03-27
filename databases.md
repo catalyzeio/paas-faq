@@ -13,3 +13,35 @@ title: Databases - PaaS FAQ
 ### How do database backups work?
 
 We perform automated backups each night. If a user requires access to those backups we can provide them with the credentials to do so. We currently have plans in the works to add backup functionality to the dashboard.
+
+### How I will deploy the database configuration?
+
+There is a feature in the Catalyze command line interface (CLI) for importing a database.
+
+```
+>catalyze db --help
+Usage: catalyze db [OPTIONS] COMMAND [ARGS]...
+
+  Interact with database services.
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  import  Imports data into a database
+
+ ```
+
+ If you run into issues with this, please file a support ticket [here](mailto:support@catalyze.io). We can, if really need be, import the data for you. Please DO NOT send the dump via zendesk or other channels, especially if the data contains PHI. We will create a Box folder and share that with you. We will also need the specific command which you need to be run to import the data as well.
+
+ 
+### How I can change the database configuration?
+
+Either with your code or we can setup a command line bastion service that will allow you to connect to the database client application via ssh. We're working on a secure console access which will eliminate the need for a bastion service. Note that there might be a cost for the bastion service. Please file a support ticket if you would like this added to your environment. Please note that this access is not available in the startup plan.
+
+
+### What will be the database connection string that I can use inside the application?
+
+Your Catalyze environment has the environment variables for the database (along with other relevant variables such as Redis, sentinel or arbiter URLs) specified in [a Zendesk ticket](https://resources.catalyze.io/paas/getting-started/deploying-your-first-app/provisioning-your-environment/) update that you would have received. Your application can read these and setup the connection based on that information. An example template view of that ticket is shown below.
+
+![Sample Zendesk Onboarding ticket]()
