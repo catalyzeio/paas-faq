@@ -2,6 +2,8 @@
 title: Application Related - PaaS FAQ
 ---
 
+# Application
+
 ### How do I deploy my application?
 
 After we provision your environment, we will provide you with a git URL to push your code to. You will receive [a Zendesk ticket](https://resources.catalyze.io/paas/getting-started/deploying-your-first-app/provisioning-your-environment/) update with those details. After you do your initial push to that git URL as outlined [here](https://resources.catalyze.io/paas/getting-started/deploying-your-first-app/deploying-the-app/). We will do the first deploy for you after which all subsequent deploys will be automatic. 
