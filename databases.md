@@ -14,6 +14,13 @@ title: Databases - PaaS FAQ
 
 We perform automated backups each night. If a user requires access to those backups we can provide them with the credentials to do so. We currently have plans in the works to add backup functionality to the dashboard.
 
+### How do i get access to the database (or redis or other) URL?
+The endpoint connection information for the resources your application will consume is available in the environment variables for your environment.  You can view your environment variables in the Catalyze Dashboard or with the catalyze-paas-cli client program with the command:  `catalyze vars list`
+
+You can download the CLI here - https://github.com/catalyzeio/catalyze-paas-cli. All associated install instructions are also available in the repo.
+
+Note that this information will only be available *after* you have submitted the information required on the dashboard and we have provisioned your environment. This information will be accessible via an update to the Zendesk ticket.
+
 ### How I will deploy the database configuration?
 
 There is a feature in the Catalyze command line interface (CLI) for importing a database.
