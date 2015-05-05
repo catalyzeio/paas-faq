@@ -15,7 +15,7 @@ In the [email](https://resources.catalyze.io/paas/getting-started/deploying-your
 
 ### Do you have a cPanel?
 
-We don't have a cPanel. The web interface we have for interacting with your Environment is the dashboard, which is accessibe [here](https://dashboard.catalyze.io). There you can change your environment variables and add ssh keys.
+We don't have a cPanel. The web interface we have for interacting with your Environment is the dashboard, which is accessible [here](https://dashboard.catalyze.io). There you can change your environment variables and add ssh keys.
 
 We also provide a command line interface that provides more interaction with your environment. You can download the catalyze-paas-cli [here](https://github.com/catalyzeio/catalyze-paas-cli). 
 
