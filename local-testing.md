@@ -10,7 +10,7 @@ While we do not provide a local development environment with the full capabiliti
 
 In order to run this you will need to install [boot2docker](http://boot2docker.io/), or already have a local docker host. 
 
- 
+
 #### Setup BTD:
 
 ```
