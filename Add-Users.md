@@ -3,9 +3,9 @@
 Q: How do I add users to my environment via the Catalyze dashboard?
 
 A: To add a user via the Catalyze dashboard, click on your environment and go to manage users. 
-![Manage Users Button](Add Users Screenshots/Manage Users Screenshot.png)
+![Manage Users Button](/Add Users Screenshots/Manage Users Screenshot.png)
 Enter in the id of the user you would like to add and click add user. (hint: you can get a user’s ID by using `catalyze whoami` from the Catalyze CLI)
-![Add User Button](Add Users Screenshots/Add User Screenshot.png)
+![Add User Button](/Add Users Screenshots/Add User Screenshot.png)
 
 Q: How do I add users to my environment via the Catalyze CLI?
 
