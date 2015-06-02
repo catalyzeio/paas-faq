@@ -4,8 +4,6 @@ title: Manage Users - PaaS FAQ
 
 #Manage Users
 
-##Add Users
-
 ### How do I add users to my environment via the Catalyze dashboard?
 
 To add a user via the Catalyze dashboard, view the environment you want to add a user to and click the "Manage Users" button.
