@@ -62,3 +62,8 @@ To connect with openssh, enter the ssh command in the format  `ssh -i <identify 
 
 Our HA database is configured as a master-slave setup, it's up to your application to manage which one to connect to. You can also contact us if you need something manually promoted to master by filing a support ticket.
 
+### Can I use MySQL workbench or my other favorite database GUI ?
+
+For security reasons we do not allow direct connections from the Internet to the database within your environment. All database access is restricted to the application node(s) and database replicas for High Availability databases. 
+
+We are working on a feature to provide additional capability to the paas-cli that will provide you with more management access to your database via the command line tools for each database (e.g. psql, mysql, redis-cli). That feature will be available in the third quarter of 2015.
