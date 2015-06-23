@@ -4,3 +4,6 @@ Yes! Nightly an automated backup task is performed against the database services
 
 ## How do I check the status of a backup?
 You can use the Catalyze CLI to check the status of the daily database backups. Please see the [Catalyze CLI Resource page](https://resources.catalyze.io/paas/cli/sections/backup-list/) for more information about using the CLI.
+
+## How can I get a copy of my backup?
+Stay tuned for the Catalyze CLI `export` command coming soon. In the mean time, send a request to us at support@catalyze.io.
