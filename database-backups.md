@@ -1,3 +1,7 @@
+---
+title: Database Backups - PaaS FAQ
+---
+
 # Database Backups
 ## Is my database getting backed up?
 Yes! Nightly an automated backup task is performed against the database services in your Catalyze Environment. The backup files are encrypted and securely stored in cloud storage in Amazon's S3 service or Rackspace's Cloudfiles service.
