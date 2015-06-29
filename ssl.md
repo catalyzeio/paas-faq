@@ -18,6 +18,12 @@ bundle of their certificates to complete the "chain". Getting these files in the
 can be a little tricky, just remember to include your site's server certificate first. Here are a
 few commands and links to get you started in the right direction.
 
+To verify the bundle or chain matches the certificate use this command:
+
+```
+openssl verify -verbose -purpose sslserver -CAfile chain.crt www.example.com.crt
+```
+
 Concatenate the certificates into a single certificate file (note, you might also see these files
 referred to as PEM files):
 
