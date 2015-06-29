@@ -9,14 +9,22 @@ title: SSL - PaaS FAQ
 Purchase a new certificate for your domain name from a SSL certificate provider. Verify the new certificate matches the domain name.  You can use [openssl](https://www.openssl.org/docs/) to view a x509 certificate that is in PEM format with the command `openssl x509 -in certficatefile -noout -text`. The results of the command will be  shown in your console.  Verify the new certificate and private key match. The section in our Onboarding documents regarding [Domain Names and SSL Certificates](https://resources.catalyze.io/paas/getting-started/deploying-your-first-app/domain-names/) contains more detailed information for verifying the key and certificate match as well as information about wildcard certificates and certificate chains.  Please contact Catalyze [support](https://catalyzeio.zendesk.com/hc/en-us/requests/new).   We will establish a secure method to share the files and schedule a time to update the certificate.
 
 
-## How should my SSL certificate be formatted?
+## How should my SSL certificate chain be formatted?
 
 Catalyze terminates SSL connections with an Nginx server. If you are downloading SSL certificates
 from your provider and have the option to download the Nginx chain, that is a good place to start.
 Typically, your SSL cert provider will supply you with a certificate for your site along with a
-bundle of their certificates to complete the "chain". Getting these files in the ordered correctly
-can be a little tricky, just remember to include your site's server certificate first. Here are a
-few commands and links to get you started in the right direction.
+bundle of their certificates to complete the "chain". These files are combined to create the 
+certificate chain. Getting the cert chain ordered correctly can be a little tricky, but fortunately
+there are lots of examples to be found. One thing to remember is to include your site's server 
+certificate first. Here are a few commands and links to get you started in the right direction.
+
+Concatenate the certificates into a single file, referred to as the cert chain (note, you might
+also see these files referred to as PEM files):
+
+```
+$ cat www.example.com.crt bundle.crt > www.example.com.chained.crt
+```
 
 To verify the bundle or chain matches the certificate use this command:
 
@@ -24,15 +32,9 @@ To verify the bundle or chain matches the certificate use this command:
 openssl verify -verbose -purpose sslserver -CAfile chain.crt www.example.com.crt
 ```
 
-Concatenate the certificates into a single certificate file (note, you might also see these files
-referred to as PEM files):
-
-```
-$ cat www.example.com.crt bundle.crt > www.example.com.chained.crt
-```
-
-Next, before uploading your certificate test it out locally to verify it matches your private key.
-See the following question for an overview.
+Next, before uploading your certificate chain, test it out locally to verify it matches your private key.
+See the following question for an overview. After you verify the cert chain upload the entire chain
+to the Catalyze Dashboard for your Environment.
 
 Links:
 
