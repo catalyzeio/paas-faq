@@ -63,3 +63,9 @@ overview of doing that:
 
 * [Digicert - Install SSL Certs on Nginx](https://www.digicert.com/ssl-certificate-installation-nginx.htm)
 
+## I bought an SSL Cert, but they want a CSR. To get a CSR from my registered domain name, they want to know the IP address/hosting platform etc. Can you provide those?
+
+Generating a CSR is not something that we can do unfortunately. You must do it on your machine or a server. Are you using Windows or Mac? If you are using a Mac (or have access to a Linux server) this guide should be helpful: https://support.godaddy.com/help/article/3601/generating-nginx-csrs-certificate-signing-requests. If you are on Windows, DigiCert has a GUI utility that should work, https://www.digicert.com/util/ (YMMV).
+
+Some of your providers might claim that you need to do that on a specific server. It doesn't actually depend on the specific server. Note that the set of info that you need to fill out to get a CSR doesn't include a MAC address which uniquely identifies a machine. The standard docs invariably assume a dedicated "machine" but all you really get is a VM running on that machine. In our case, that translates to a container which might move across machines to ensure availability. So go ahead and create it assuming that it is on your local machine or even skip it if possible. 
+
