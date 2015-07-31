@@ -31,7 +31,7 @@ We support the following buildpacks:
 
 **Note: third party buildpacks are not fully supported by Catalyze and should be used at the user's own risk.**
 
-It is possible to create your own build pack or use one of the many existing [third party buildpacks](https://devcenter.heroku.com/articles/third-party-buildpacks). To use a custom build pack the BUILDPACK_URL environment variable should be set via the [Catalyze PaaS CLI](https://resources.catalyze.io/paas/cli/sections/vars/).
+It is possible to create your own build pack or use one of the many existing [third party buildpacks](https://devcenter.heroku.com/articles/third-party-buildpacks). To use a custom build pack the BUILDPACK_URL environment variable should be set via the [Catalyze PaaS CLI](https://resources.catalyze.io/paas/cli/sections/vars/) or via the [Catalyze Dashboard](https://resources.catalyze.io/paas/getting-started/deploying-your-first-app/environment-variables/).
 
 ```
 catalyze vars set BUILDPACK_URL=<BUILDPACK_URL>
