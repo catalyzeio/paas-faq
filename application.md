@@ -55,3 +55,11 @@ We are currently working on a solution that will provide access to the metrics u
 
 To get a preview of the type of metrics we are collecting, have a look at our [cadvisor-metrics](https://github.com/catalyzeio/cadvisor-metrics) repository, which we wrote specifically for this purpose and have released as open source software. 
 
+
+### How do I schedule tasks for my application?
+
+Oftentimes in your application you'll want to schedule a task that runs periodically or at a specific time throughout the day/week/month/etc. This sounds like I'm describing the `cron` utility... However, `cron` (or a `cron`-like service) may not be the best option for your application. If you rely on scheduled tasks getting executed on-time and successfully we recommend moving this behavior within the control of your application. There are many task scheduling frameworks available to easily fit inside of your application. These generally have advantages over cron-like services which offer the ability to scale, have improved restart behavior, and retry failed tasks all to improve the guarantee that your tasks will run. 
+
+Some of our recommended task scheduling frameworks include [Sidekiq](https://github.com/mperham/sidekiq/wiki) for Ruby and [Celery](http://www.celeryproject.org) for Python. These scheduling frameworks are generally backed by a message broker such as Redis or an AMQP-based alternative like Rabbitmq which helps guarantee message delivery. 
+
+Currently the Catalyze Platform does not offer a `cron`-like service for production ready applications. But fear not! We have a few features percolating and hopefully be ready for you to plug into soon!
