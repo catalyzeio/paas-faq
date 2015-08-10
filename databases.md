@@ -7,7 +7,7 @@ title: Databases - PaaS FAQ
 ### What versions of the [supported databases](//resources.catalyze.io/paas/getting-started/deploying-your-first-app/supported-databases/) does Catalyze use?
 
 - Percona 5.6
-- PostgreSQL 9.3
+- PostgreSQL 9.4
 - MongoDB 2.6
 
 ### How do database backups work?
