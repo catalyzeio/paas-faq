@@ -9,7 +9,7 @@ Environment Metrics
 Looking through metrics data at a high level can give you a pretty good indication of how well your application is performing. The Catalyze Platform provides you with several metrics to get you started analyzing the performance of your application. Each metric reported represents the state captured during a collection window spanning one minute. 
 
 ### Can I get metrics outside of the last 24 hours?
-The platform stores a maximum of 24 hours worth of metrics data for your environment, in 1-minute intervals (1440 data points). Additional data can be captured and stored off-site by using the Catalyze CLI (refer to the CLI's metrics command for more information). There’s no PHI in metrics so you can store that data anywhere you like. 
+The platform stores a maximum of 24 hours worth of metrics data for your environment, in 1-minute intervals (1440 data points). Additional data can be captured and stored off-site by using the Catalyze CLI (refer to the CLI's [metrics command](https://github.com/catalyzeio/cli/blob/master/Docs.md#-metrics) for more information). There’s no PHI in metrics so you can store that data anywhere you like. 
 
 ## CPU Metrics
 ### Usage
