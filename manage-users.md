@@ -5,7 +5,7 @@ title: Manage Users - PaaS FAQ
 
 ### How do I invite users to my environment via the Catalyze dashboard?
 
-To invite a users to your environment via the dashboard, log in and view the environment you would like to add users to and click the manage users button.
+To invite users to your environment via the dashboard, log in and view the environment you would like to add users to and click the manage users button.
 
 Enter the email address of the user you would like to invite and click invite user.
 ![Invite User Email Input Screenshot](http://cdn2.dropmark.com/85294/09312c4db6ca933f8100d16022ac56bba6650a0f/Screen%20Shot%202015-09-18%20at%2012.23.55%20PM.png)
