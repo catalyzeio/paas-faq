@@ -13,7 +13,7 @@ Usage: catalyze console service [command]
 …
 ```
 
-In the general usage of the command you must specify the name of the service for the console to connect to followed by an optional command to initiate when the console is opened. If connecting to a database shell only the service name required, the command string should be left blank. The following are several examples to get you started with the secure console command.
+In the general usage of the command you must specify the name of the service for the console to connect to followed by an optional command to initiate when the console is opened. If connecting to a database shell only the service name is required, the command string should be left blank. The following are several examples to get you started with the secure console command.
 
 Connect to a database shell (database service named "db01"):
 
