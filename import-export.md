@@ -18,6 +18,8 @@ MySQL      - .sql
 MongoDB    - .tar.gz
 ```
 
+In general, the import command is to be used **only** when importing data to your database rather than migrating databases from another database service. Importing a dump into Catalyze from a different database is not recommended and poses the risk of data loss. If you need to import another database, we recommend uploading this locally and then performing a data only dump to be importing into Catalyze. You also **should not** import a file retrieved from the "export" command. The export downloads a full backup of your database including users, permissions, and data. The import command should only be used to import data.
+
 ### SQL Imports
 Make sure you have associated an environment and are currently in the directory of the associated git repo. Let’s create a short script to create a table and insert a few rows.
 
@@ -77,27 +79,32 @@ dump/catalyze/user_roles.bson
 $ catalyze db import db01 mymongodump.tar.gz --mongo-database catalyze
 ```
 
-While you are using the CLI check out the "console" command to log into the mongo database shell; read **HERE** for more information about the secure console command.
+While you are using the CLI check out the "console" command to log into the mongo database shell; read [here]() for more information about the secure console command.
 
 ## Export
 > ***Important Note:*** When exporting data from your database be aware that you maybe downloading PHI onto the local hard drive. Proceed with caution and insure that the appropriate disk-level encryption and access controls have been established prior to initiating a database export. 
 
-Using the Catalyze CLI "export" command allows you to download the latest dump of your database service. The export command is easy to use you'll specify the name of the database service to export and a file path for the download location. Here is an example usage:
+Using the Catalyze CLI "export" command allows you to download the latest dump of your database service. The export command is easy to use and is equivalent to download a backup of your database. This may be helpful for running metrics collections offline against a production database or a variety of other uses. You **should not** import anything exported with the "export" command. To use the "export" command, you'll specify the name of the database service to export and a file path for the download location. Here is an example usage:
 
 ```
 $ catalyze db export db01 ./mydbexport.sql
 …
 ```
 
-'db01' is the name of your database service and './mydbexport.sql' is the path where you want the export saved to. Exports are similar to using the backup/restore process described later in this article. An export first creates a backup of your entire database. When the backup is finished it is encrypted and stored in cloud storage. Once finished, a unique temporary signed URL is retrieved and used to securely download your encrypted backup. This temporary URL will expire shortly after the download completes. Once downloaded, the file is then decrypted on your local machine and stored at the given path. Since the export creates a backup you will be able to see the record of your export when listing the backups for the database service (more about this in the Backup & Restore section below).
+Please note that you should not give the export command the location of a directory but the full path to a file. This file does not need to exist as it will be created.
 
-## Backup & Restore
-The backup and restore commands of the CLI are there for you to create snapshots of your data, perhaps, in preparation for a software upgrade or data migration. A nightly backup of your database is also automated. All of these backups can be viewed with the CLI backup commands. Backups are encrypted and stored in cloud storage and retained for 7 days. The following examples will show you how to create, list, and restore database backups performed via the CLI. 
+'db01' is the name of your database service and './mydbexport.sql' is the path where you want the export saved to. Exports are similar to using the backup process described later in this article. An export first creates a backup of your entire database. When the backup is finished it is encrypted and stored in cloud storage. Once finished, a unique temporary signed URL is retrieved and used to securely download your encrypted backup. This temporary URL will expire shortly after the download completes. Once downloaded, the file is then decrypted on your local machine and stored at the given path. Since the export creates a backup you will be able to see the record of your export when listing the backups for the database service (more about this in the Backup section below).
+
+## Backup
+The backup command of the CLI is there for you to create snapshots of your data, perhaps, in preparation for a software upgrade or data migration. A nightly backup of your database is also automated. All of these backups can be viewed with the CLI backup commands. Backups are encrypted and stored in cloud storage and retained for 7 days. The following examples will show you how to create and list database backups performed via the CLI.
 
 ### Create a Backup
 
 ```
 $ catalyze backup create db01
+```
+```
+$ catalyze db backup db01
 ```
 
 List the backups for a database service. Take note that each of the backups has a corresponding ID that should be used in the case of restoring that specific backup. Also of note, if your database service is part of an HA configuration only the database identified as a primary (or master) node will be backed up nightly. Therefore when you display the backups for a secondary database node you will not see nightly backup entries but will on the primary node. 
@@ -105,17 +112,14 @@ List the backups for a database service. Take note that each of the backups has 
 ```
 $ catalyze backup list db01
 ```
-
-Selecting a backup ID from the list, plug it into the restore command to initiate the restore sequence. 
-
 ```
-$ catalyze backup restore db01 {backupID}
+$ catalyze db list db01
 ```
 
 ### Download a Backup
 > ***Important Note:*** When downloading a database backup be aware that you maybe downloading PHI onto the local hard drive. Proceed with caution and insure that the appropriate disk-level encryption and access controls have been established prior to initiating a database export. 
 
-If you would like to download yesterday's database backup to inspect it or maybe assist tracking down a bug you can do so with the backup download command. This command is quite similar to the database export command but in the command you'll specify the ID of the backup to download and the file path of where to download the file. The file downloaded will be of the same file format as expected for a database import (Postgres and MySQL backups will be SQL files and MongoDB backups will be downloaded as gzipped tarballs). 
+If you would like to download yesterday's database backup to inspect it or maybe assist tracking down a bug you can do so with the backup download command. This command is quite similar to the database export command but in the command you'll specify the ID of the backup to download and the file path of where to download the file. The file downloaded will be of the same file format as expected for a database import (Postgres and MySQL backups will be SQL files and MongoDB backups will be downloaded as gzipped tarballs). Please note that since a downloaded backup and an export are identical, as with exports you **should not** import a downloaded backup.
 
 ```
 $ catalyze backup list db01
