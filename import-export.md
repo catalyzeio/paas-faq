@@ -100,18 +100,28 @@ The backup command of the CLI is there for you to create snapshots of your data,
 
 ### Create a Backup
 
+For CLI versions previous to version 2.1.0, run
+
 ```
 $ catalyze backup create db01
 ```
+
+For CLI version 2.1.0 and above, run
+
 ```
 $ catalyze db backup db01
 ```
 
 List the backups for a database service. Take note that each of the backups has a corresponding ID that should be used in the case of restoring that specific backup. Also of note, if your database service is part of an HA configuration only the database identified as a primary (or master) node will be backed up nightly. Therefore when you display the backups for a secondary database node you will not see nightly backup entries but will on the primary node. 
 
+For CLI versions previous to version 2.1.0, run
+
 ```
 $ catalyze backup list db01
 ```
+
+For CLI version 2.1.0 and above, run
+
 ```
 $ catalyze db list db01
 ```
@@ -119,14 +129,26 @@ $ catalyze db list db01
 ### Download a Backup
 > ***Important Note:*** When downloading a database backup be aware that you maybe downloading PHI onto the local hard drive. Proceed with caution and insure that the appropriate disk-level encryption and access controls have been established prior to initiating a database export. 
 
-If you would like to download yesterday's database backup to inspect it or maybe assist tracking down a bug you can do so with the backup download command. This command is quite similar to the database export command but in the command you'll specify the ID of the backup to download and the file path of where to download the file. The file downloaded will be of the same file format as expected for a database import (Postgres and MySQL backups will be SQL files and MongoDB backups will be downloaded as gzipped tarballs). Please note that since a downloaded backup and an export are identical, as with exports you **should not** import a downloaded backup.
+If you would like to download yesterday's database backup to inspect it or maybe assist tracking down a bug you can do so with the backup download command. This command is quite similar to the database export command but in the command you'll specify the ID of the backup to download and the file path of where to download the file. The file downloaded will be of the same file format as expected for a database import (Postgres and MySQL backups will be SQL files and MongoDB backups will be downloaded as gzipped tarballs). Please note that since a downloaded backup and an export are identical, as with exports you **should not** import a downloaded backup. For CLI versions previous to version 2.1.0, run
 
 ```
 $ catalyze backup list db01
 ```
 
-Now choose the one you want to download and copy its ID and download it
+For CLI version 2.1.0 and above, run
+
+```
+$ catalyze db list db01
+```
+
+Now choose the one you want to download and copy its ID and download it. For CLI versions previous to version 2.1.0, run
 
 ```
 $ catalyze backup download db01 {backupID} ./mydbdownload.sql
+```
+
+For CLI version 2.1.0 and above, run
+
+```
+$ catalyze db download db01 {backupID} ./mydbdownload.sql
 ```
