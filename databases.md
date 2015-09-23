@@ -37,9 +37,9 @@ Options:
 Commands:
   import  Imports data into a database
 
- ```
+```
 
- If you run into issues with this, please file a support ticket [here](mailto:support@catalyze.io). We can, if really need be, import the data for you. Please DO NOT send the dump via zendesk or other channels, especially if the data contains PHI. We will create a Box folder and share that with you. We will also need the specific command which you need to be run to import the data as well.
+You can find out more about imports by reading our [database import & export](//resources.catalyze.io/paas/paas-faq/import-export/) FAQ article. If you run into issues with this, please file a support ticket [here](mailto:support@catalyze.io). We can, if really need be, import the data for you. Please DO NOT send the dump via zendesk or other channels, especially if the data contains PHI. We will create a Box folder and share that with you. We will also need the specific command which you need to be run to import the data as well.
 
 ### How I can change the database configuration?
 
