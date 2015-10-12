@@ -40,7 +40,9 @@ Now let’s import the script!
 $ catalyze db import db01 myimport.sql
 ```
 
-After it successfully finishes importing your script, the CLI will dump the output of the command back to your terminal. 
+After it successfully finishes importing your script, the CLI will dump the output of the command back to your terminal.
+
+Note - nothing will be dropped/deleted unless the script you import explicitly does so. This goes both ways - if you have a `DROP DATABASE catalyze;` statement in your script, it **will** be executed. Be careful!
 
 ### MongoDB Imports
 
