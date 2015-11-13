@@ -36,9 +36,9 @@ It is possible to create your own build pack or use one of the many existing [th
 ```
 catalyze vars set BUILDPACK_URL=<BUILDPACK_URL>
 ```
-###Buildpack Pinning###
+###Buildpack Version Pinning###
 
-We recommend that all buildpack selections get pinned to a specific version in the .buildpacks file.
+We recommend that all buildpack selections get pinned to a specific release version in the .buildpacks file.
 
 Unpinned Buildpack URL: https://github.com/heroku/heroku-buildpack-ruby  
 
