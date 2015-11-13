@@ -63,6 +63,14 @@ overview of doing that:
 
 * [Digicert - Install SSL Certs on Nginx](https://www.digicert.com/ssl-certificate-installation-nginx.htm)
 
+Alternatively, since version 2.0.0, you may verify your SSL certificates with the Catalyze CLI. This is done using the `ssl verify` command. All you need is the path to your certificate chain, private key, and your hostname. Here is an example.
+
+```
+catalyze ssl verify ~/path/to/chain.cert ~/path/to/private.key *.mydomain.com
+```
+
+Upon successful validation, the CLI will print out basic information about your certificate. If validation fails for any reason, a failure message will be printed out to the console.
+
 ## I bought an SSL Cert, but they want a CSR. To get a CSR from my registered domain name, they want to know the IP address/hosting platform etc. Can you provide those?
 
 Generating a CSR is not something that we can do unfortunately. You must do it on your machine or a server. Are you using Windows or Mac? If you are using a Mac (or have access to a Linux server) this guide should be helpful: https://support.godaddy.com/help/article/3601/generating-nginx-csrs-certificate-signing-requests. If you are on Windows, DigiCert has a GUI utility that should work, https://www.digicert.com/util/ (YMMV).
