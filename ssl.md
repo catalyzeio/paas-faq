@@ -69,7 +69,7 @@ Alternatively, since version 2.0.0, you may verify your SSL certificates with th
 catalyze ssl verify ~/path/to/chain.cert ~/path/to/private.key *.mydomain.com
 ```
 
-Upon successful validation the CLI will print out basic information about your certificate. If validation fails for any reason, it will be printed out to the console.
+Upon successful validation, the CLI will print out basic information about your certificate. If validation fails for any reason, a failure message will be printed out to the console.
 
 ## I bought an SSL Cert, but they want a CSR. To get a CSR from my registered domain name, they want to know the IP address/hosting platform etc. Can you provide those?
 
