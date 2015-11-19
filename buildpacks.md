@@ -38,13 +38,11 @@ catalyze vars set BUILDPACK_URL=<BUILDPACK_URL>
 ```
 ###Buildpack Version Pinning###
 
-We recommend that all buildpack selections get pinned to a specific release version in the .buildpacks file.
+We recommend that all buildpack selections get pinned to a specific release version in the .buildpacks file. If you do not pin the buildpack to a release, your application may get an unexpectedly different version of the buildpack.
 
-Unpinned Buildpack URL: https://github.com/heroku/heroku-buildpack-ruby  
+Unpinned Buildpack URL: `https://github.com/heroku/heroku-buildpack-ruby`
 
-Pinned Buildpack URL: https://github.com/heroku/heroku-buildpack-ruby#v140
-
-If you do not pin the buildpack to a release, your application may get an unexpectedly different version of the buildpack.
+Pinned Buildpack URL: `https://github.com/heroku/heroku-buildpack-ruby#v140`
 
 ###Why is Laravel only supported in versions 5+ and above?
 
