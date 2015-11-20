@@ -24,7 +24,7 @@ We also provide a command line interface that provides more interaction with you
 
 ### Do you have a CLI?
 
-We also provide a command line interface that provides more interaction with your environment. You can download the catalyze-paas-cli [here](https://github.com/catalyzeio/cli). More details on how to use the CLI is available [here](https://resources.catalyze.io/paas/getting-started/the-paas-cli/). The CLI is under active development and more and more features will be added over time. Note that it has also been open sourced so if you have any questions or issues, please do not hesitate to file an issue [there](https://github.com/catalyzeio/cli/issues). We would welcome contributions as well. Feel free to fork it and issue a pull request.
+We also provide a command line interface that provides more interaction with your environment. You can download the catalyze cli [here](https://github.com/catalyzeio/cli). More details on how to use the CLI is available [here](https://resources.catalyze.io/paas/getting-started/the-paas-cli/). The CLI is under active development and more and more features will be added over time. Note that it has also been open sourced so if you have any questions or issues, please do not hesitate to file an issue [there](https://github.com/catalyzeio/cli/issues). We would welcome contributions as well. Feel free to fork it and issue a pull request.
 
 
 ### Do I have access to Cloud Storage?
