@@ -46,7 +46,11 @@ Pinned Buildpack URL: `https://github.com/heroku/heroku-buildpack-ruby#v140`
 
 ###Dependencies Outside The Buildpack###
 
-Sometimes an application will have dependencies outside of the buildpack that cannot be retrieved by other means. Catalyze provides the means to install applications from the apt repositroies for Ubuntu 14.04. In your application repository, create a top level folder named `.catalyze` and create a file called `packages` inside of the folder. List the packages that you would like installed in your environment, one package per line. Keep in mind that these packages must be available in the standard Ubuntu 14.04 repositories.
+Sometimes an application will have dependencies outside of the buildpack that cannot be retrieved by other means such as ruby gems. Catalyze provides the means to install software from the apt repositories for Ubuntu 14.04.
+
+In your application repository, create a top level folder named `.catalyze` and create a file called `packages` inside of the `.catalyze` folder. List the packages that you would like installed in your environment, one package per line. Keep in mind that these packages must be available in the standard Ubuntu 14.04 repositories.
+
+`/.catalyze/packages`
 
 ###Why is Laravel only supported in versions 5+ and above?
 
