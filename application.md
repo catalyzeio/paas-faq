@@ -44,7 +44,7 @@ To conduct simple email communication that does not include PHI, Mailgun, Mandri
 
 ### Can I connect to my PaaS environment via a VPN?
 
-We do not support the ability to connect to PaaS environments via VPN. We are able to configure secure console access via SSH to meet certain use cases. This service requires an additional monthly charge. Pletase [contact us](https://catalyzeio.zendesk.com/hc/en-us/requests/new) for details.
+We do not support the ability to connect to PaaS environments via VPN. We are able to configure secure console access via SSH to meet certain use cases. This service requires an additional monthly charge. Please [contact us](https://catalyzeio.zendesk.com/hc/en-us/requests/new) for details.
 
 Beyond that, all interaction with your PaaS environment should be done with the [Catalyze Dashboard](https://dashboard.catalyze.io), Catalyze [paas-cli](https://github.com/catalyzeio/cli) client application or your application code.
 
