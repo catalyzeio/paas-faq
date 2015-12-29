@@ -31,7 +31,7 @@ We also provide a command line interface that provides more interaction with you
 
 As part of your Catalyze environment you have a fixed amount of "Cloud Storage" space that includes your application's assets (the application code/binaries, static JavaScript, HTML, CSS) as well as disk space used by your database instance. This is not the same as a cloud-based file storage or CDN solution like Rackspace's Cloud Files or AWS S3.
 
-We have the ability to configure a compliant S3 bucket as part of you environment at an additional charge. This is our preferred approach, as opposed to storing content like large images and PDFs in your git repository (which is considered bad practice by most) and then serving them up via your application. Please [contact us](https://catalyzeio.zendesk.com/hc/en-us/requests/new) for details.
+We have the ability to configure a compliant S3 bucket as part of your environment at an additional charge. This is our preferred approach, as opposed to storing content like large images and PDFs in your git repository (which is considered bad practice by most) and then serving them up via your application. Please [contact us](https://catalyzeio.zendesk.com/hc/en-us/requests/new) for details.
 
 
 ### How do I send email? Is there a SMTP server?
