@@ -19,6 +19,6 @@ Once that user signs into their new account they can accept the invitation via t
 
 ### How do I invite users to my environment via the Catalyze CLI?
 
-To add a user via the Catalyze CLI, use the command `catalyze invites send {email}`. An email with directions on how to accept the invitation will then be sent to the email address specified.  More documentation on the catalyze CLI can be found [here](https://resources.catalyze.io/paas/cli/).
+To add a user via the Catalyze CLI, use the command `catalyze invites send {email}`. An email with directions on how to accept the invitation will then be sent to the email address specified.  More documentation on the catalyze CLI can be found [here](https://resources.catalyze.io/paas/paas-cli-reference/).
 
 * Note: if you need to add users to multiple environments you must follow these steps for each environment.
