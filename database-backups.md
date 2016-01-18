@@ -10,4 +10,4 @@ Yes! Nightly an automated backup task is performed against the database services
 You can use the Catalyze CLI to check the status of the daily database backups. Please see the [Catalyze CLI Resource page](https://resources.catalyze.io/paas/paas-cli-reference/backup-list/) for more information about using the CLI.
 
 ## How can I get a copy of my backup?
-You can download a copy of your database backup by using the `export` command in the CLI. You can read more about imports, exports, and backups by reading our [database import and export](//resources.catalyze.io/paas/paas-faq/import-export/) FAQ article.
+You can download a copy of your database backup by using the `export` command in the CLI. You can read more about imports, exports, and backups by reading our [database import and export](https://resources.catalyze.io/paas/paas-faq/import-export/) FAQ article.
