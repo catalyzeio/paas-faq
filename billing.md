@@ -14,7 +14,7 @@ We accept credit card payments processed through Stripe. We collect payment info
 
 ### Do you offer non-production environments for things like development, staging, QA, demo, etc?
 
-Yes, we do. The major differences between these non-production envrionments and our fully compliant production envrionments are that non-production envrionments do not include backup, disaster recovery, and an associated business assocaite agreement (BAA). Non-productin environments mirror our production environments in all other ways, including having dedicated logging.
+Yes, we do. The major differences between these non-production envrionments and our fully compliant production envrionments are that non-production envrionments do not include backup, disaster recovery, and an associated business assocaite agreement (BAA). Non-production environments mirror our production environments in all other ways, including having dedicated logging.
 
 ### How long does it take to deploy an environment on Catalyze?
 
