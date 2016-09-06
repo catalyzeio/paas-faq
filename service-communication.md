@@ -11,3 +11,7 @@ Catalyze sets up private DNS records for all of your services that are accessibl
 ## What are the `.internal` addresses in my database URL environment variables?
 
 Database URLs are made up of multiple parts and may include some, or all of, the hostname, username, password, and port number. The hostname is the piece that ends in `.internal` and points to a private DNS record available only to your services. Using these `.internal` addresses means your network traffic never leaves your private, encrypted network. You can find out which database services belong to which DNS names by running the [catalyze services list](//paas/paas-cli-reference/#services-list) command. This is available since version 3.3.0 of the CLI.
+
+## How do private DNS records work for HA services?
+
+When you have an [HA](//stratum/articles/ha-application/) service (multiple jobs running for one service), your network traffic will round robin to all services associated with the given private DNS name.
